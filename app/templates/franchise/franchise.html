@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Franchise
+{% endblock %}
+
+
+{% block content %}
+
+<div class="post-content-car">
+    <h2>Do you want to make a profit from the first month? Open your business with <span>Ice-wind</span></h2>
+</div>
+
+<div class="content-body" >
+<section class="row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInLeft">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img-cor" src="/static/img/us.jpg" class="news-img">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 news-post-cor animate__animated animate__bounce animate__fadeInRight">
+            <div class="col-width-auto align-left">
+                <h5 class="text-md">Why us?</h5>
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>We professionally prepare the most delicious ice cream with a unique craft taste of our own preparation - this is our business card and main product.
+                                                 The guarantee of quality and taste has allowed us to work successfully on the market for more than 3 years. Our experience has made our business successful, and we share this with our partners.</p>
+<p></p>
+
+            </div>
+        </div>
+    </section>
+
+<br><br>
+
+<section class="post-content row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInRight">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img" src="/static/img/franchaising.jpg" class="news-img">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 news-desc reveal-rig animate__animated animate__bounce animate__fadeInLeft">
+            <div class="col-width-auto align-left">
+                <h5 class="text-md">What you will get by purchasing an Ice-wind franchise</h5>
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>So, what will you get by purchasing an Ice-wind franchise:
+                <p>– A ready-made turnkey business start-up system.</p>
+                <p>– A profitable business model with calculations and a clearly formed profit-making plan.</p>
+                <p>- You will have a personal manager who helps and guides you at every stage - from finding a location to opening and launching the establishment.</p>
+                <p>- You will receive clear and understandable budgets and a prescribed amount of necessary investments.</p>
+                <p>- And as a result, quick payback of the business from 6 to 16 months. Another of our significant advantages is the well-established production and fast delivery of all the necessary products for each institution. Therefore, you always receive high-quality and fresh products.</p>
+                <p>- We have our own personnel selection and training system. Qualified personnel will allow you to reach the desired income even faster.</p>
+                <p>In addition, you receive marketing support: an already formed brand and recognition, corporate style and design, necessary consultations and advertising support for the establishment, provision of necessary printing and branded materials, monitoring and processing of customer feedback.</p>
+<p></p>
+
+            </div>
+        </div>
+    </section>
+
+<br><br>
+
+<section class="row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInLeft">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img-cor" src="/static/img/foodtruck.jpg" class="news-img">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 news-post-cor animate__animated animate__bounce animate__fadeInRight">
+            <div class="col-width-auto align-left">
+                <h5 class="text-md">Food truck</h5>
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>Also, there is the Food Truck format - a new, modern and very convenient type of franchise from I love kebab!
+                                                 The approximate cost of opening a trailer together with equipment is from $30,000.
+                                                 One of the main advantages is that the food truck is mobile, that is, it can be moved from location to location, as well as participate in various festivals.</p>
+<p></p>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="callback animate__animated animate__bounce animate__fadeInUp">
+    <h2>Contact form</h2>
+    <form action="{% url 'franchise' %}" method="POST">
+        {% csrf_token %}
+        <input class="input-callback" required="" type="text" name="name" placeholder="name">
+        <input class="input-callback" required="" type="text" name="phone" placeholder="phone">
+        <button class="but-callback" type="submit" onclick="formSend()">Submit</button>
+    </form>
+</div>
+
+<div class="accordion-table animate__animated animate__bounce animate__fadeInUp">
+    <h3 style="color: #bb4007;">Frequently asked questions</h3>
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        How quickly can you open an institution?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        On average, it takes 1 to 2 months to open a facility (location search, repair, team selection, opening).
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        What is the average check per day?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        20 euro is an average check.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Will I get help with accounting?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        Yes, you can get the necessary consultation.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<style>
+
+h5 {
+        color: #bb4007;
+    }
+
+.img {
+        font-size: 14px;
+        border-radius: 20px;
+        height: 422px;
+        width: 661px;
+    }
+
+    .img-cor {
+       font-size: 14px;
+       border-radius: 20px;
+       margin-left: 130px;
+       height: 422px;
+       width: 661px;
+    }
+
+    .accordion-button:not(.collapsed) {
+            background-color: #F4976C;
+    }
+
+    .accordion-body {
+         background-color: #FBE8A6;
+    }
+
+    .accordion-button {
+         background-color: #F4976C;
+         color: white;
+    }
+
+    .post-content-car {
+         margin: 40px 0 100px 0;
+         height: 580px;
+         background-image: url("../static/img/franch.jpg");
+         background-size: cover;
+
+         color: black;
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         text-align: center;
+    }
+
+     .post-content-car h2 {
+         padding: 0 350px 0 350px;
+         color: white;
+     }
+
+     .post-content-car span {
+         color: #bb4007;
+     }
+
+     .content-body {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin: 0;
+    }
+
+    .post-content {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .news-desc {
+        padding-left: 150px;
+        padding-right: 30px;
+        padding-top: 30px;
+    }
+
+    .news-post-cor {
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 80px;
+    }
+
+    .img {
+        font-size: 14px;
+        border-radius: 20px;
+    }
+
+    .img-cor {
+       font-size: 14px;
+       border-radius: 20px;
+       margin-left: 130px;
+    }
+
+    .news-block {
+        margin-top: 60px;
+    }
+
+
+    .but-center {
+        margin-left:42%;
+    }
+
+
+    .callback {
+        margin-top: 50px;
+        background: #F4976C;
+        color: white;
+
+        padding: 40px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .input-callback {
+        border-radius: 20px;
+        border-color: white;
+        padding: 12px 10px 12px 30px;
+        border: none;
+        font-weight: 700;
+        margin: 0 20px 0 20px;
+    }
+
+    .but-callback {
+        background: #1a1a18;
+        color: #fff;
+        border-radius: 20px;
+        padding: 12px 80px 12px 80px;
+        border: none;
+    }
+
+    .accordion-table {
+        padding: 0 240px 0 240px;
+        margin-top: 50px;
+    }
+
+
+</style>
+
+<script>
+    function formSend() {
+        alert("Message sent successfully")
+    }
+</script>
+{% endblock content %}
