@@ -1,0 +1,412 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Career
+{% endblock %}
+
+
+{% block content %}
+
+<div class="post-content-car">
+
+<div class="post-content-car-inside">
+        <h2>Become part of the i Ice-wind team</h2>
+            <br><br>
+        <h4><a href="" class="open-popup but-kebub-career">Send resume</a></h4>
+    </div>
+</div>
+
+<div class="window-sale" >
+        <form enctype="multipart/form-data" class="popup" action="{% url 'career' %}" method="POST" >
+            {% csrf_token %}
+        <button class="close-popup"></button>
+
+        <div class="call-table" >
+
+        <div class="header">Want to work</div>
+        <input class="input-callback" required="" type="text" name="name" placeholder="name">
+        <input class="input-callback" required="" type="text" name="phone" placeholder="phone">
+        <input class="input-callback" required="" type="email" name="email" placeholder="email">
+        <input class="input-callback" required="" type="text" name="city" placeholder="city">
+        <textarea class="input-callback-text" required="" name="message" rows="4" cols="40" placeholder="message"></textarea>
+        <label id="fileloadTitle" title="Завантажити" for="fileload">resume <i class="input-callback"></i></label>
+        <input id="fileload" name="file" type="file">
+        <button class="but-callback" onclick="formSend()" type="submit">submit</button>
+        </div>
+
+        </form>
+    </div>
+
+<div class="content-body" >
+
+<section class="row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInLeft">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img-cor" src="/static/img/career/hr-team.jpg" class="news-img">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 news-post-cor animate__animated animate__bounce animate__fadeInRight">
+            <div class="col-width-auto align-left">
+                <h5 class="text-md">Our HR policy:</h5>
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>One of the main indicators of the quality and success of the institution is a good team of employees. In the company "Ice-wind", we pay special attention to the selection of the right personnel. It is such people who will be able to make the client happy, and this is one of the main missions of our institution.
+                                                 In our company, everyone can grow and develop. You can start from the position of administrator of the institution, show yourself by showing your responsibility and initiative. But, expanding our network, we can offer you a position, for example, a regional manager.
+                                                 We have ambitious plans to increase our network to 100 establishments in the next few months, so you will definitely find a good place to work!</p>
+<p></p>
+            </div>
+        </div>
+    </section>
+
+
+<br><br>
+
+<section class="post-content row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInRight">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img" src="/static/img/career/quality.jpg" class="news-img">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 news-desc reveal-rig animate__animated animate__bounce animate__fadeInLeft">
+            <div class="col-width-auto align-left">
+                <h5 class="text-md">Our values</h5>
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>Quality in everything is our first and foremost value. Our employees are the main capital of the company. Each of us treats the company as our own business.
+                                                 Our Guest always receives a quality product and a good mood.
+                                                 We know how to set correct and clear goals and, of course, achieve them.
+                                                 We are honest and fair in everything and to everyone - guests, colleagues and partners and first of all to ourselves.
+                                                 Cleanliness and order - everywhere and in everything.
+                                                 We are committed to long-term relationships.
+                                                 We think creatively and out of the box.
+                                                 We provide continuity through mentorship and belief in everyone.
+                                                 We are sincere and positive.
+                                                 The development of the company and the professional development of everyone go in unison and rapidly uphill.</p>
+<p></p>
+            </div>
+        </div>
+    </section>
+
+<br><br>
+
+<section class="row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInLeft">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img-cor" src="/static/img/career/mission.jpg" class="news-img">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 news-post-cor animate__animated animate__bounce animate__fadeInRight">
+            <div class="col-width-auto align-left">
+                <h5 class="text-md">Mission</h5>
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>Our mission is big and clear at the same time - to make everyone's everyday life more comfortable and efficient thanks to fast, high-quality and safe food preparation.
+                                                 Guests of "Ice-wind" value their time and aim to get only the best, the "Ice-wind" team helps them in this by creating a positive atmosphere: pleasant and sincere communication, high-quality dishes prepared as quickly as possible, and of course - an individual approach!</p>
+<p></p>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div class="content-center">
+
+<div class="post-content-car-1  table-1 animate__animated animate__bounce animate__fadeInLeft">
+    <div class="content-center-table">Cafe</div>
+</div>
+<div class="post-content-car-1  table-2 animate__animated animate__bounce animate__fadeInLeft">
+    <div class="content-center-table">Office</div>
+</div>
+<div class="post-content-car-1  table-3 animate__animated animate__bounce animate__fadeInRight">
+    <div class="content-center-table">Production</div>
+</div>
+<div class="post-content-car-1  table-4 animate__animated animate__bounce animate__fadeInRight">
+    <div class="content-center-table">Logistics</div>
+</div>
+
+    <br><br>
+
+</div>
+<h4><a class="open-popup but-kebub-career but-center animate__animated animate__bounce animate__fadeInDown">Send resume</a></h4>
+<style>
+
+.img {
+        font-size: 14px;
+        border-radius: 20px;
+        height: 422px;
+        width: 661px;
+    }
+
+    .img-cor {
+       font-size: 14px;
+       border-radius: 20px;
+       margin-left: 130px;
+       height: 422px;
+       width: 661px;
+    }
+
+h5 {
+        color: #bb4007;
+    }
+
+#fileload {
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+label {
+    margin-top: 23px;
+    border-radius: 15px;
+    display: block;
+    background: #fff;
+    color: #5c5c5b;
+    padding: 12px 10px;
+    border: none;
+}
+
+
+.but-callback {
+    background: #1a1a18;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0 80px 0 80px;
+    border: none;
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    }
+
+.window-sale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+    z-index: 1;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #F4976C;
+    height: 660px;
+    width: 500px;
+    border-radius: 20px;
+    transition: 0.5s all;
+    color: white;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+
+.window-sale.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+
+.close-popup {
+    margin-left: 91.99%;
+    width: 40px;
+    height: 35px;
+    border: none;
+    background-image: url("../static/img/button-close.png");
+    border-top-right-radius: 20px;
+}
+
+.call-table {
+    padding: 10px 40px 40px 40px;
+}
+
+.input-callback {
+    border-radius: 15px;
+    border-color: white;
+    border: none;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 23px;
+    height: 40px;
+    padding: 5px;
+}
+
+.input-callback-text {
+    border-radius: 15px;
+    margin-top: 23px;
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+}
+
+    .post-content-car {
+         margin: 40px 0 100px 0;
+         height: 580px;
+         background-image: url("../static/img/career.jpg");
+         background-size: cover;
+
+         color: white;
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+    }
+
+    .post-content-car-inside  {
+        text-align: center;
+    }
+
+    .but-kebub-career {
+         background: #bb4007;
+         color: #fff;
+         padding: 8px 35px;
+         border-radius: 50px;
+         margin-top: 14px;
+         transition: all .3s ease;
+         margin-top: 20px;
+     }
+
+    .but-kebub-career:hover {
+        background-color: black;
+    }
+
+    .post-content-car-1 {
+        height: 370px;
+        width: 220px;
+        border-radius: 30px;
+        margin: 20px 25px;
+    }
+
+    .table-1 {
+        background-image: url("../static/img/career/cafe.jpg");
+        background-size: cover;
+    }
+
+    .table-2 {
+        background-image: url("../static/img/career/office.jpg");
+        background-size: cover;
+    }
+
+    .table-3 {
+        background-image: url("../static/img/career/production.jpg");
+        background-size: cover;
+    }
+
+    .table-4 {
+        background-image: url("../static/img/career/logistics.jpg");
+        background-size: cover;
+    }
+
+    .content-center-table {
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        text-align: center;
+        color: white;
+        padding: 30px 0 30px 0;
+        background-color: #bb4007;
+    }
+
+
+    .content-center {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 60px 0;
+    }
+
+     .content-body {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin: 0;
+    }
+
+    .post-content {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .news-desc {
+        padding-left: 150px;
+        padding-right: 30px;
+        padding-top: 30px;
+
+    }
+
+    .news-post-cor {
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 80px;
+
+    }
+
+    .img {
+        font-size: 14px;
+        border-radius: 20px
+    }
+
+    .img-cor {
+       font-size: 14px;
+       border-radius: 20px;
+       margin-left: 130px;
+    }
+
+    .news-block {
+        margin-top: 60px;
+    }
+
+
+    .but-center {
+        margin-left:42%;
+    }
+
+</style>
+
+<script>
+
+function formSend() {
+        alert("Message sent successfully")
+    }
+
+    let popupBg = document.querySelector('.window-sale');
+let popup = document.querySelector('.popup');
+let openPopupButtons = document.querySelectorAll('.open-popup');
+let closePopupButton = document.querySelector('.close-popup');
+
+openPopupButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        popupBg.classList.add('active');
+        popup.classList.add('active');
+    })
+});
+
+closePopupButton.addEventListener('click',() => {
+    popupBg.classList.remove('active');
+    popup.classList.remove('active');
+});
+
+
+document.addEventListener('click', (e) => {
+    if(e.target === popupBg) {
+        popupBg.classList.remove('active');
+        popup.classList.remove('active');
+    }
+});
+</script>
+
+
+{% endblock content %}
