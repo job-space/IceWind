@@ -1,0 +1,537 @@
+{% extends 'base.html' %}
+
+{% block title %}
+IceWind
+{% endblock %}
+
+
+{% block content %}
+
+<div style="body-conteiner">
+
+        <div class="gallery animate__animated animate__bounce animate__fadeInDown">
+            <div class="gallery-container">
+                <div class="gallery-item gallery-item-1" style="background-image: url('../static/img/container-scroll/image-1.jpg'); background-size: cover;" data-index="1">
+                    <div class="post-container">
+                        <div class="post-container-inside">
+                            <h4><a href="{% url 'menu' %}" class="but-kebub-career">Menu</a></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-2" style="background-image: url('../static/img/container-scroll/image-2.png'); background-size: cover;" data-index="2">
+                    <div class="post-container">
+                        <div class="post-container-inside">
+                            <h4><a href="{% url 'news' %}" class="but-kebub-career">News</a></h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="gallery-item gallery-item-3" style="background-image: url('../static/img/container-scroll/image-3.jpg'); background-size: cover;" data-index="3">
+                    <div class="post-container">
+                        <div class="post-container-inside">
+                            <h4><a href="{% url 'career' %}" class="but-kebub-career">Career</a></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-4" style="background-image: url('../static/img/container-scroll/image-4.jpg'); background-size: cover;" data-index="4">
+                    <div class="post-container">
+                        <div class="post-container-inside">
+                            <h4><a href="{% url 'franchise' %}" class="but-kebub-career">Franchise</a></h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="gallery-item gallery-item-5" style="background-image: url('../static/img/container-scroll/image-5.png'); background-size: cover;" data-index="5">
+                    <div class="post-container">
+                        <div class="post-container-inside">
+                            <h4><a href="{% url 'contact' %}" class="but-kebub-career">Contact</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="gallery-controls"></div>
+        </div>
+    </div>
+
+<div class="content-body" >
+
+<section class="row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInLeft">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img-cor" src="/static/img/news_content/first.jpg">
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12 news-post-cor animate__animated animate__bounce animate__fadeInRight">
+            <div class="col-width-auto align-left">
+                <h3 class="text-md">Creation of the Ice-wind network</h3>
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>Once we thought: "Where to find the best ice cream to eat" and the thought turned into a dream, and the dream turned into an action.
+                                                  The story of the birth of the company "Ice-wind" began back in 2020, in the heart of Europe, where two friends decided to implement their idea - to open an establishment where such a favorite ice cream is prepared really tasty and quickly.
+                                                  3 of this moment, already dozens of establishments throughout the country treat everyone with the most perfect combo menu and cool kebabs.
+                                                  But for us, this is only the beginning, we know how to set goals and achieve them as quickly as possible.
+                                                  Our goal is 100 Ice-wind establishments in Europe! But we are sure that this year we will implement it.</p>
+            </div>
+        </div>
+    </section>
+
+<br><br>
+
+<section class="post-content row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInRight">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img" src="/static/img/news_content/second.jpg">
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12 news-desc reveal-rig animate__animated animate__bounce animate__fadeInLeft">
+            <div class="col-width-auto align-left">
+                <h3 class="text-md">History of ice cream</h3>
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>Even the legendary doctor Hippocrates, who is called the father of medicine, advised eating, as he called it, "frozen cream", which, in his opinion, improves well-being. By the way, the world-famous commander Alexander the Great was a great lover of ice cream. A sweet mixture was prepared for him - various fruits with honey, and then it was cooled and frozen on ice.
+                                                 In Ancient Rome, snow and ice were placed in specially equipped rooms. In the summer, this snow was mixed with honey and cheese and served to the table of rich people. But even Roman ice cream, it turns out, is not the oldest. There is information that it was known in the countries of the Far East a thousand years before our era. It was from China that the traveler and merchant Marco Polo brought the secret of making fruit ice cream to Spain in the 18th century.
+                                                 Since then, this original dish has become fashionable in Europe. But it was only fruit ice cream. And a delicacy made of milk and cream was invented by the cook of the French king when he was at the court of the English king. For a long time, ice cream was a privilege of the rich, poor people knew nothing about it.</p>
+            </div>
+        </div>
+    </section>
+
+<br><br>
+
+<section class="row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInLeft">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img-cor" src="/static/img/news_content/third.jpg">
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12 news-post-cor animate__animated animate__bounce animate__fadeInRight">
+            <div class="col-width-auto align-left">
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>We are actively developing, and we will always be glad to hear interesting proposals from you.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="span-section">
+            <div class="span-section-table">
+                <span id="number-1" class="number" data-value="3"><span class="">0</span></span>
+                <span class=""><h4>years on the market</h4></span>
+            </div>
+            <div class="span-section-table">
+                <span id="number-2" class="number" data-value="7"><span class="">0</span></span> <span class="num-k">K</span>
+                <span class=""><h4>we sell ice cream every day</h4></span>
+            </div>
+            <div class="span-section-table">
+                <span id="number-3" class="number" data-value="40"><span class="">0</span></span> <span class="num-k">K</span>
+                <span class=""><h4>regular customers</h4></span>
+            </div>
+</div>
+
+<style>
+
+    .text-md {
+        color: #bb4007;
+    }
+
+    .content-body {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin: 0;
+    }
+
+    .post-content {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .news-desc {
+        padding-left: 150px;
+        padding-right: 30px;
+        padding-top: 30px;
+
+    }
+
+    .news-post-cor {
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 80px;
+
+    }
+
+    .img {
+        font-size: 14px;
+        border-radius: 20px;
+
+        height: 380px;
+        width: 650px;
+
+    }
+
+    .img-cor {
+       border-radius: 20px;
+       margin-left: 130px;
+       height: 380px;
+       width: 650px;
+    }
+
+    .span-section {
+        color: #bb4007;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .span-section-table {
+        text-align: center;
+        margin: 100px;
+    }
+
+    .number {
+        font-size: 80px;
+    }
+
+    .num-k {
+        font-size: 60px;
+    }
+
+
+.post-container {
+    background-size: cover;
+    display: flex;
+         justify-content: center;
+         align-items: center;
+
+         margin: 150px 0 0 0;
+}
+
+
+.post-container-inside {
+    text-align: center;
+}
+
+.but-kebub-career {
+         background: #F4976C;
+         color: #fff;
+         padding: 8px 35px;
+         border-radius: 50px;
+         margin-top: 16px;
+         transition: all .3s ease;
+         margin-top: 20px;
+     }
+
+    .body-conteiner {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: linear-gradient(180deg, rgd(236, 213, 232) 0%, rgb(50, 112, 118) 100%);
+    }
+
+    .gallery {
+        width: 100%;
+    }
+
+    .gallery-container {
+        align-items: center;
+        display: flex;
+        height: 400px;
+        margin: 0 auto;
+        max-width: 1000px;
+        position: relative;
+    }
+
+    .gallery-item {
+        height: 200px;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        width: 330px;
+        z-index: 0;
+        border-radius: 15px;
+        background-size: contain;
+    }
+
+    .gallery-item-1 {
+        left: 15%;
+        opacity: .4;
+        transform: translateX(-50%);
+    }
+
+    .gallery-item-2, .gallery-item-4{
+        height: 250px;
+        opacity: 0.8;
+        width: 380px;
+        z-index: 1;
+    }
+
+    .gallery-item-2 {
+        left: 30%;
+        transform: translateX(-50%);
+    }
+
+    .gallery-item-3 {
+        box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35);
+        height: 300px;
+        opacity: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 430px;
+        z-index: 2;
+    }
+
+    .gallery-item-4 {
+        left: 70%;
+        transform: translateX(-50%);
+    }
+
+    .gallery-item-5 {
+        left: 85%;
+        opacity: -4;
+        transform: translateX(-50%);
+    }
+
+    .gallery-controls {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0;
+        height: 100px;
+    }
+
+    .gallery-controls button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        font-size: 30px;
+        margin: 0 50px;
+        padding: 0 12px;
+        text-transform: capitalize;
+    }
+
+    .gallery-controls-button:focus {
+        outline: none;
+    }
+
+    .gallery-controls-previous {
+        position: relative;
+
+    }
+
+    .gallery-controls-previous::before {
+        border: solid #000;
+        border-width: 0 5px 5px 0;
+        content: '';
+        display: inline-block;
+        height: 5px;
+        left: -30px;
+        padding: 10px;
+        position: absolute;
+        top: 25%;
+        transform: rotate(135deg) translateY(-50%);
+        transition: left 0.15s ease-in-out;
+        width: 5px;
+    }
+
+    .gallery-controls-previous:hover::before {
+        left: -40px;
+    }
+
+    .gallery-controls-next {
+        position: relative;
+    }
+
+    .gallery-controls-next::before {
+        border: solid #000;
+        border-width: 0 5px 5px 0;
+        content: '';
+        display: inline-block;
+        height: 5px;
+        padding: 10px;
+        position: absolute;
+        right: -30px;
+        top: 45;
+        transform: rotate(-45deg) translateY(-50%);
+        transition: right 0.15s ease-in-out;
+        width: 5px;
+    }
+
+
+    .gallery-controls-next:hover::before {
+        right: -40px;
+    }
+
+    .gallery-nav {
+        bottom: -15px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .gallery nav li {
+        background: #ccc;
+        border-radius: 50%;
+        height: 10px;
+        margin: 0 16px;
+        width: 10px;
+    }
+
+    .gallery-nav li.gallery-item-selected {
+        background: #555;
+    }
+
+
+</style>
+
+<script>
+
+    const number1 = document.getElementById('number-1');
+    const updateCount1 = () => {
+        const value = parseInt(number1.dataset.value);
+        let initialValue = 0;
+
+        const increaseCount = setInterval (() => {
+            initialValue += 1;
+
+            if (initialValue > value) {
+                number1.textContent = `${value}`;
+                clearInterval(increaseCount);
+                return;
+            }
+
+            number1.textContent = `${initialValue}`;
+        }, 10);
+    };
+
+
+    const number2 = document.getElementById('number-2');
+
+    const updateCount2 = () => {
+        const value = parseInt(number2.dataset.value);
+        let initialValue = 0;
+
+        const increaseCount = setInterval (() => {
+            initialValue += 1;
+
+            if (initialValue > value) {
+                number2.textContent = `${value}`;
+                clearInterval(increaseCount);
+                return;
+            }
+
+            number2.textContent = `${initialValue}`;
+        }, 10);
+    };
+
+
+    const number3 = document.getElementById('number-3');
+
+    const updateCount3 = () => {
+        const value = parseInt(number3.dataset.value);
+        let initialValue = 0;
+
+        const increaseCount = setInterval (() => {
+            initialValue += 1;
+
+            if (initialValue > value) {
+                number3.textContent = `${value}`;
+                clearInterval(increaseCount);
+                return;
+            }
+
+            number3.textContent = `${initialValue}`;
+        }, 10);
+    };
+
+    updateCount1()
+    updateCount2()
+    updateCount3()
+
+
+    const galleryContainer = document.querySelector('.gallery-container');
+    const galleryControlsContainer = document.querySelector('.gallery-controls');
+    const galleryControls = ['previous', 'next'];
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    class Carousel {
+        constructor(container, items, controls) {
+            this.carouselContainer = container;
+            this.carouselControls = controls;
+            this.carouselArray = [...items];
+        }
+
+        updateGallery(){
+            this.carouselArray.forEach(e1 => {
+                e1.classList.remove('gallery-item-1');
+                e1.classList.remove('gallery-item-2');
+                e1.classList.remove('gallery-item-3');
+                e1.classList.remove('gallery-item-4');
+                e1.classList.remove('gallery-item-5');
+            });
+
+            this.carouselArray.slice(0, 5).forEach((el , i) => {
+                el.classList.add(`gallery-item-${i+1}`);
+            });
+        }
+
+        setCurrentState(direction) {
+            if (direction.className == 'gallery-controls-previous'){
+                this.carouselArray.unshift(this.carouselArray.pop());
+            } else {
+                this.carouselArray.push(this.carouselArray.shift());
+            }
+            this.updateGallery();
+        }
+
+        setControls() {
+            this.carouselControls.forEach(control => {
+                galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
+                document.querySelector(`.gallery-controls-${control}`).innerText = control;
+            });
+        }
+
+
+        useControls() {
+            const triggers = [...galleryControlsContainer.childNodes];
+            triggers.forEach(control => {
+                control.addEventListener('click', e => {
+                    e.preventDefault();
+                    this.setCurrentState(control);
+                });
+            });
+        }
+
+        right(){
+
+            const controls = '';
+            this.setCurrentState(controls);
+
+        }
+
+        auto_right(){
+
+            var self = this
+
+            setInterval(function(){
+                self.right();
+            }, 2000);
+
+        }
+
+
+}
+
+    const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+    exampleCarousel.setControls();
+    exampleCarousel.useControls();
+    exampleCarousel.auto_right();
+
+</script>
+{% endblock content %}
