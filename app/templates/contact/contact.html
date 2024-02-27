@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contact
+{% endblock %}
+
+
+{% block content %}
+<div class="post-content-car"></div>
+
+<div class="table animate__animated animate__bounce animate__fadeInUp">
+<div class="table-contact">
+    <h2>Feedback</h2>
+
+    <form action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+
+        <input class="input-callback"  required="" type="text" name="name" placeholder="name">
+        <input class="input-callback" required="" type="text" name="phone" placeholder="phone">
+        <input class="input-callback"  required="" type="email" name="email" placeholder="email">
+        <input class="input-callback"  required="" type="text" name="city" placeholder="city">
+        <textarea class="input-callback-text" required="" name="message" rows="4" cols="40" placeholder="text"></textarea>
+
+    <button class="but-callback" onclick="formSend()" type="submit">Submit</button>
+</form>
+</div>
+</div>
+<style>
+    .post-content-car {
+         margin: 40px 0 100px 0;
+         height: 580px;
+         background-image: url("../static/img/feedback.png");
+         background-size: cover;
+    }
+
+    .table {
+        display: flex;
+        justify-content: center;
+    }
+
+    .table-contact {
+        height: 500px;
+        width: 800px;
+        background: #F4976C;
+        border-radius: 20px;
+
+        padding: 40px;
+
+        color: white;
+
+    }
+
+    .input-callback {
+        border-radius: 20px;
+        border-color: white;
+
+        border: none;
+        font-weight: 700;
+
+        margin: 20px 11px 20px 11px;
+        width: 335px;
+
+    }
+
+    .table-contact .but-callback {
+        background: #1a1a18;
+        color: #fff;
+        border-radius: 20px;
+        padding: 0 80px 0 80px;
+        border: none;
+
+        width: 100%;
+        height: 50px;
+
+        margin-top: 20px;
+    }
+
+
+    .input-callback-text {
+        border-radius: 20px;
+
+        margin-top: 20px;
+
+        width: 100%;
+    }
+
+</style>
+
+<script>
+    function formSend() {
+        alert("Message sent successfully")
+    }
+</script>
+{% endblock content %}
