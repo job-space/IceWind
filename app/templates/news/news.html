@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}
+News
+{% endblock %}
+
+
+{% block content %}
+
+<div>
+   <img class="img-head" src="/static/img/news_head.jpg">
+</div>
+
+<div class="news-head">
+    <h3><b>News</b></h3>
+</div>
+
+<div class="content-body" >
+
+{% for post in posts %}
+
+{% if post.id in allowed_ids %}
+<section class="row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInLeft">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img-cor" src="{{ post.news_image.url }}">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 news-post-cor animate__animated animate__bounce animate__fadeInRight">
+{% else %}
+<section class="post-content row row-tight display-fl news-block">
+        <div class="col-sm-6 col-xs-12 animate__animated animate__bounce animate__fadeInRight">
+            <div class="reveal-left news-img-wrapper" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateX(0) scale(1); opacity: 1;transform: translateX(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+                <img class="img" src="{{ post.news_image.url }}">
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 news-desc reveal-rig animate__animated animate__bounce animate__fadeInLeft">
+{% endif %}
+            <div class="col-width-auto align-left">
+                <h5 class="text-md">{{ post.title }}</h5>
+                <h3 class="text-sm"></h3>
+                <p class="news-text-desc"></p><p>{{ post.news_content }}</p>
+            </div>
+        </div>
+    </section>
+
+{% endfor %}
+
+
+</div>
+<style>
+
+    .content-body {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0;
+    }
+
+    .img-head {
+        width: 100%;
+    }
+
+    .news-head {
+        color: #bb4007;
+        text-align: center;
+        padding: 40px 0 20px 0;
+    }
+
+    .post-content {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .news-desc {
+        padding-left: 150px;
+        padding-right: 30px;
+        padding-top: 30px;
+
+    }
+
+    .news-post-cor {
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 80px;
+
+    }
+
+    h5 {
+        color: #bb4007;
+
+    }
+
+    .img {
+        font-size: 14px;
+        border-radius: 20px;
+        height: 522px;
+        width: 661px;
+    }
+
+    .img-cor {
+       font-size: 14px;
+       border-radius: 20px;
+       margin-left: 130px;
+       height: 522px;
+       width: 661px;
+    }
+</style>
+
+{% endblock content %}
