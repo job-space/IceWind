@@ -1,0 +1,416 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Menu
+{% endblock %}
+
+
+{% block content %}
+
+<div class="window-sale">
+        <form class="popup">
+        <button class="close-popup"></button>
+        <h3>On sale soon...</h3>
+        </form>
+</div>
+
+<div class="head-name container-head-menu-cor"><h3><b>Our menu</b></h3></div>
+
+<div  class="menu-kebub container-head-menu-cor">
+    <ul >
+       <li>
+           <button id="classic" name="classic" class="but-m two">Classic</button>
+       </li>
+       <li>
+           <button id="italian" name="italian" class="but-m one" >Italian</button>
+       </li>
+        <li >
+           <button id="desserts" name="desserts" class="but-m one" >Desserts</button>
+       </li>
+        <li>
+           <button id="milkshakes" name="milkshakes" class="but-m one" >Milkshakes</button>
+       </li>
+        <li>
+           <button id="lemonades" name="lemonades" class="but-m one">Lemonades</button>
+       </li>
+       <li>
+           <button id="tea" name="tea" class="but-m one" >Tea</button>
+       </li>
+
+      </ul>
+
+</div>
+
+<div class=" menu-panel row-tight row display-fl">
+
+                {% for categ in category %}
+                  {% if categ.category_name == 'classic' %}
+                    {% for post in categ.post.all %}
+
+          <div class="menu-table align-center col-md-4 col-sm-6 col-xs-12 table-classic">
+              <img class="photo-menu" src="{{ post.menu_image.url }}">
+              <div class="food-description">
+              <span class="food-name"><font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">{{ post.title_menu }}</font></font>
+              </span>
+                  <span class="food-ingredients"><b></b>{{ post.composition }}</span>
+                  <span class="weight">{{ post.weight }} gr</span>
+                  <span class="food-price"><h2><b>{{ post.price }} euro</b></h2></span>
+              <button class="but-menu">Select</button>
+              </div>
+            </div>
+                  {% endfor %}
+                 {% endif %}
+               {% endfor %}
+
+                  {% for categ in category %}
+                  {% if categ.category_name == 'italian' %}
+                    {% for post in categ.post.all %}
+
+          <div class="hid menu-table align-center col-md-4 col-sm-6 col-xs-12 table-italian">
+              <img class="photo-menu" src="{{ post.menu_image.url }}">
+              <div class="food-description">
+              <span class="food-name"><font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">{{ post.title_menu }}</font></font>
+              </span>
+                  <span class="food-ingredients"><b></b>{{ post.composition }}</span>
+                  <span class="weight">{{ post.weight }} gr</span>
+                  <span class="food-price"><h2><b>{{ post.price }} euro</b></h2></span>
+              <button class="but-menu">Select</button>
+              </div>
+            </div>
+                  {% endfor %}
+                 {% endif %}
+               {% endfor %}
+
+             {% for categ in category %}
+                  {% if categ.category_name == 'desserts' %}
+                    {% for post in categ.post.all %}
+
+          <div class="hid menu-table align-center col-md-4 col-sm-6 col-xs-12 table-desserts">
+              <img class="photo-menu" src="{{ post.menu_image.url }}">
+              <div class="food-description">
+              <span class="food-name"><font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">{{ post.title_menu }}</font></font>
+              </span>
+                  <span class="food-ingredients"><b></b>{{ post.composition }}</span>
+                  <span class="weight">{{ post.weight }} gr</span>
+                  <span class="food-price"><h2><b>{{ post.price }} euro</b></h2></span>
+              <button class="but-menu">Select</button>
+              </div>
+            </div>
+                  {% endfor %}
+                 {% endif %}
+               {% endfor %}
+
+             {% for categ in category %}
+                  {% if categ.category_name == 'milkshakes' %}
+                    {% for post in categ.post.all %}
+
+          <div class="hid menu-table align-center col-md-4 col-sm-6 col-xs-12 table-milkshakes">
+              <img class="photo-menu" src="{{ post.menu_image.url }}">
+              <div class="food-description">
+              <span class="food-name"><font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">{{ post.title_menu }}</font></font>
+              </span>
+                  <span class="food-ingredients"><b></b>{{ post.composition }}</span>
+                  <span class="weight">{{ post.weight }} gr</span>
+                  <span class="food-price"><h2><b>{{ post.price }} euro</b></h2></span>
+              <button class="but-menu">Select</button>
+              </div>
+            </div>
+                  {% endfor %}
+                 {% endif %}
+               {% endfor %}
+
+              {% for categ in category %}
+                  {% if categ.category_name == 'lemonades' %}
+                    {% for post in categ.post.all %}
+
+          <div class="hid menu-table align-center col-md-4 col-sm-6 col-xs-12 table-lemonades">
+              <img class="photo-menu" src="{{ post.menu_image.url }}">
+              <div class="food-description">
+              <span class="food-name"><font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">{{ post.title_menu }}</font></font>
+              </span>
+                  <span class="food-ingredients"><b></b>{{ post.composition }}</span>
+                  <span class="weight">{{ post.weight }} gr</span>
+                  <span class="food-price"><h2><b>{{ post.price }} euro</b></h2></span>
+              <button class="but-menu">Select</button>
+              </div>
+            </div>
+                  {% endfor %}
+                 {% endif %}
+               {% endfor %}
+
+                {% for categ in category %}
+                  {% if categ.category_name == 'tea' %}
+                    {% for post in categ.post.all %}
+
+          <div class="hid menu-table align-center col-md-4 col-sm-6 col-xs-12 table-tea">
+              <img class="photo-menu" src="{{ post.menu_image.url }}">
+              <div class="food-description">
+              <span class="food-name"><font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">{{ post.title_menu }}</font></font>
+              </span>
+                  <span class="food-ingredients"><b></b>{{ post.composition }}</span>
+                  <span class="weight">{{ post.weight }} gr</span>
+                  <span class="food-price"><h2><b>{{ post.price }} euro</b></h2></span>
+              <button class="but-menu">Select</button>
+              </div>
+            </div>
+                  {% endfor %}
+                 {% endif %}
+               {% endfor %}
+
+</div>
+
+
+<style>
+
+.window-sale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+
+    background: #FBE8A6;
+
+}
+
+.popup {
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    height: 300px;
+    width: 600px;
+    border-radius: 20px;
+    transition: 0.5s all;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+
+
+.window-sale.active {
+
+
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.window-sale h3 {
+
+    height: 100%;
+    weight: 100%;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 110px;
+}
+
+
+.close-popup {
+    margin-left: 93.4%;
+    width: 40px;
+    height: 35px;
+    border: none;
+    background-image: url("../static/img/button-close.png");
+    border-top-right-radius: 20px;
+}
+
+.head-name {
+    margin-top: 60px;
+
+}
+
+.menu-kebub {
+    padding: 40px;
+    font-size: 23px;
+}
+
+
+.container-head-menu-cor {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container-head-menu-cor li {
+  display: inline-block;
+}
+
+.one {
+   color: black;
+    background: white;
+  padding: 8px 15px;
+  border-radius: 50px;
+  margin-top: 15px;
+  transition: all .3s ease;
+      border: none;
+}
+
+.two {
+    color: white;
+    background-color: #bb4007;
+
+    padding: 8px 15px;
+    border-radius: 50px;
+    margin-top: 15px;
+    transition: all .3s ease;
+        border: none;
+}
+
+.row-tight {
+    padding-left: 6.07%;
+    padding-right: 6.07%;
+    margin: 0;
+
+}
+
+.col-md-4 {
+    width: 33.33333333%;
+}
+
+.menu-panel .col-md-4 {
+    margin-bottom: 60px;
+}
+
+.food-price {
+    color: #bb4007;
+}
+
+.align-center {
+    text-align: center;
+}
+
+
+.menu-panel span {
+    line-height: 2em;
+}
+.food-ingredients, .food-name, .food-price, .food-weight, .span-text {
+    display: block;
+}
+
+
+.food-name {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.photo-menu {
+    width: 100%;
+    border-radius: 12px;
+    width: 430px;
+
+    height: 280px;
+
+}
+
+    .but-menu {
+    margin-left: 0px;
+    background: #bb4007;
+    color: #fff;
+    padding: 12px 125px;
+    border-radius: 50px;
+    margin-top: 14px;
+    transition: all .3s ease;
+    border: none;
+}
+
+.but-menu:hover {
+    background-color: black;
+}
+
+
+
+.hid {
+    display: none;
+}
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+let popupBg = document.querySelector('.window-sale'); // Фон попап окна
+let popup = document.querySelector('.popup'); // Само окно
+let openPopupButtons = document.querySelectorAll('.but-menu'); // Кнопки для показа окна
+let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
+
+openPopupButtons.forEach((button) => { // Перебираем все кнопки
+    button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
+        e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+        popupBg.classList.add('active'); // Добавляем класс 'active' для фона
+        popup.classList.add('active'); // И для самого окна
+    })
+});
+
+closePopupButton.addEventListener('click',() => { // Вешаем обработчик на крестик
+    popupBg.classList.remove('active'); // Убираем активный класс с фона
+    popup.classList.remove('active'); // И с окна
+});
+
+
+document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+    if(e.target === popupBg) { // Если цель клика - фот, то:
+        popupBg.classList.remove('active'); // Убираем активный класс с фона
+        popup.classList.remove('active'); // И с окна
+    }
+});
+
+
+    $(document).ready(function(){
+
+    $(".but-m").click(function(){
+    $('.but-m').removeClass('two').addClass('one');
+    $('.menu-table').addClass('hid');
+    });
+
+    $("#classic").click(function(){
+        $('#classic').removeClass('one').addClass('two');
+        $('.table-classic').removeClass('hid');
+    });
+
+    $("#italian").click(function(){
+        $('#italian').removeClass('one').addClass('two');
+        $('.table-italian').removeClass('hid');
+    });
+
+    $("#desserts").click(function(){
+        $('#desserts').removeClass('one').addClass('two');
+        $('.table-desserts').removeClass('hid');
+    });
+
+    $("#milkshakes").click(function(){
+        $('#milkshakes').removeClass('one').addClass('two');
+        $('.table-milkshakes').removeClass('hid');
+    });
+
+    $("#lemonades").click(function(){
+        $('#lemonades').removeClass('one').addClass('two');
+        $('.table-lemonades').removeClass('hid');
+    });
+
+    $("#tea").click(function(){
+        $('#tea').removeClass('one').addClass('two');
+        $('.table-tea').removeClass('hid');
+    });
+
+
+});
+
+</script>
+
+
+{% endblock content %}
