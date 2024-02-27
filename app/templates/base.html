@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ua" dir="ltr">
+
+<head>
+    {% load static %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon"  href="{% static 'img/logo.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+</head>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    const mediaFiles = document.querySelectorAll('img, video');
+    let i = 0
+
+    Array.from(mediaFiles).forEach((file, index) => {
+            if(file.complete) {
+                preloader.classList.add('preloader--hide')
+            }
+        });
+    });
+</script>
+
+<body>
+
+<div id="preloader" class="preloader">
+        <div class="preloader__loader">
+            <div class="loadingio-spinner-eclipse-1r4o7et3x9g">
+                <div class="ldio-h3r5qsy0xm">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container-head-menu">
+    <ul>
+           <a  href="{% url 'home' %}"><img class="logo-img" src="/static/img/logo.png"></a>
+       <li>
+           <a href="{% url 'menu' %}">Menu</a>
+       </li>
+       <li>
+           <a href="{% url 'news' %}">News</a>
+       </li>
+        <li>
+           <a href="{% url 'career' %}">Career</a>
+       </li>
+        <li>
+           <a href="{% url 'franchise' %}">Franchise</a>
+       </li>
+        <li>
+           <a href="{% url 'contact' %}">Contact</a>
+       </li>
+
+      </ul>
+</div>
+
+
+{% block content %}
+
+{% endblock content %}
+
+<div class="container-down-menu">
+    <div class="cont-down-menu">
+    <ul>
+           <a href="{% url 'home' %}"><img class="logo-img" src="/static/img/logo_down.png"></a>
+       <li>
+           <a href="{% url 'menu' %}">Menu</a>
+       </li>
+       <li>
+           <a href="{% url 'news' %}">News</a>
+       </li>
+        <li>
+           <a href="{% url 'career' %}">Career</a>
+       </li>
+        <li>
+           <a href="{% url 'franchise' %}">Franchise</a>
+       </li>
+        <li>
+           <a href="{% url 'contact' %}">Contact</a>
+       </li>
+           <a class="insta-button" href="https://instagram.com/ice_wind_ice_cream?igshid=MzRlODBiNWFlZA=="><img class="logo_soc" src="/static/img/insta.webp"></a>
+           <a href="https://www.facebook.com/profile.php?id=61552493935484"><img class="logo_soc" src="/static/img/face.png"></a>
+    </ul>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static '/js/bootstrap.js' %}"></script>
+
+</body>
+
+<style>
+.preloader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: all  2s ease-out;
+}
+
+.preloader--hide {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.preloader__loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes ldio-h3r5qsy0xm {
+  0% { transform: rotate(0deg) }
+  50% { transform: rotate(180deg) }
+  100% { transform: rotate(360deg) }
+}
+.ldio-h3r5qsy0xm div {
+  position: absolute;
+  animation: ldio-h3r5qsy0xm 1s linear infinite;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 #e15b64;
+  transform-origin: 80px 82px;
+}
+.loadingio-spinner-eclipse-1r4o7et3x9g {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+}
+.ldio-h3r5qsy0xm {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-h3r5qsy0xm div { box-sizing: content-box; }
+
+.logo_soc {
+    height: 40px;
+    weight: 40px;
+    border-radius: 5px;
+}
+</style>
